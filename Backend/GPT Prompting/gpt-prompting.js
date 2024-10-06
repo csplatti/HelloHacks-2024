@@ -65,8 +65,8 @@ And, like, the ending is all about forgiveness and stuff. Prospero forgives his 
 Overall, "The Tempest" is, like, this crazy play with, like, magic and romance and forgiveness and all this other deep stuff. Shakespeare, man, he really knew how to, like, mix it up and keep you guessing. So, yeah, it’s, like, a totally wild ride and stuff.
 `;
 
-let out = await feedbackPipeline(badEssay, "formal tone");
+//let out = await feedbackPipeline(badEssay, "formal tone");
 
-console.log(out);
+//console.log(out);
 
 export { feedbackPipeline };
