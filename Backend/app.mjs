@@ -1,5 +1,5 @@
 import { feedbackPipeline } from "./GPT Prompting/gpt-prompting.js";
-import http from "http";
+import express from "express";
 
 let badEssay = `
 William Shakespeare’s play "The Tempest" is, like, totally a wild ride from start to finish. It’s, like, this story about this dude named Prospero who’s, like, stuck on this island with his daughter Miranda, and he’s, like, all bitter because his bro stole his dukedom and left him and Miranda to, like, die at sea. So, Prospero uses his mad magic skills to, like, summon this storm to bring his bro and all these other dudes to the island.
@@ -16,3 +16,14 @@ Overall, "The Tempest" is, like, this crazy play with, like, magic and romance a
 //feedbackPipeline(badEssay, "formal tone");
 
 // var http = require("http");
+
+const app = express();
+const port = 8080;
+
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.status(200).send("<h1>hi<h1>");
+});
+
+app.listen(port, () => console.log(`Server has started on port ${port}`));
