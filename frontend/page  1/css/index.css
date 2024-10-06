@@ -11,6 +11,11 @@ body {
   margin: unset;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 [type="text"],
 input:where(:not([type])),
 [type="email"],

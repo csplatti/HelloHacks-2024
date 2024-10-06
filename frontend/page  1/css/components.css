@@ -24,7 +24,7 @@
 }
 
 .ui.text {
-  color: var(--gray_600);
+  color: var(--black_900);
   font-family: Inter;
 }
 
@@ -45,6 +45,6 @@
 }
 
 .ui.heading {
-  color: var(--gray_600);
+  color: var(--black_900);
   font-family: Inter;
 }
