@@ -34,8 +34,15 @@ async function whenSubmitEssay(e) {
         criteria: encodeURIComponent(requestParameters.criteria),
       },
     }),
-  });
-  console.log(res);
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.feedback);
+      return data.feedback;
+    })
+    .catch((error) => {
+      console.error("Error: ", error);
+    });
 }
 
 document.getElementById("button").addEventListener("click", whenSubmitEssay);
