@@ -21,7 +21,8 @@ submit.addEventListener("click", whenSubmitEssay);
 
 const baseUrl = "http://localhost:8080/";
 async function whenSubmitEssay(e) {
-  document.getElementById("response_container").innerHTML = "";
+  document.getElementById("response_container").innerHTML =
+    "Awaiting Response...";
   let criteria = [];
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
