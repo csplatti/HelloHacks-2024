@@ -135,7 +135,6 @@ body {
 }
 
 .sidepanel {
-  align-self: center;
   background-color: var(--blue_gray_100_01);
   width: 18%;
   display: flex;
