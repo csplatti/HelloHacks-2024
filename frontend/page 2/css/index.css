@@ -43,6 +43,7 @@
 .input_three,
 .input_five {
   border: 1px solid var(--blue_gray_100_01);
+  font-family: "Inter";
   contenteditable: true; /* Make the divs editable */
 }
 
@@ -64,3 +65,414 @@
   visibility: visible; /* Show inner circle when checked */
   background-color: var(--deep_purple_a200); /* Inner circle color */
 }
+
+.tone {
+  width: 100%;
+  display: flex;
+}
+
+/* Remove default margin/padding from body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.checkboxesand {
+  color: var(--blue_gray_800);
+  margin-bottom: 4px;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  font-family: Mulish;
+  font-size: 18px;
+  gap: var(--space-lg);
+  display: flex;
+  background-color: var(--white_a700);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--blue_gray_100);
+}
+
+.dhi-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white_a700);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--cyan_800);
+}
+
+.check {
+  height: 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 14px;
+  padding: var(--space-xs);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--cyan_800);
+}
+
+/*-------------------------------------
+  2. Page CSS
+--------------------------------------*/
+.macbook-pro-16 {
+  background-color: var(--white_a700);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+   margin: 0; /* Ensures no gap between the page and the container */
+  padding: 0; /* Removes any padding inside the container */
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.sidepanel {
+  align-self: center;
+  background-color: var(--blue_gray_100_01);
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+
+.menu {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-md);
+}
+
+.megaphone_one {
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+}
+
+.assignment {
+  margin-top: 88px;
+  margin-left: 28px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.submissioncount {
+  color: var(--black_900_01) !important;
+  margin-bottom: 1352px;
+  margin-left: 98px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.column_one {
+  background-image: url(../public/images/img_group_242.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; /* Change to 100% for full width */
+  display: flex;
+  flex-direction: column; /* Align content in one column */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 50px 30px; /* Reduce padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 32px;
+    padding-right: 32px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 16px 20px;
+  }
+}
+
+.column {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: var(--blue_gray_50);
+  box-shadow: var(--shadow-xs);
+  width: 72%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--white_a700);
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 16px 20px;
+  }
+}
+
+.columnsubmitwri {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.submitwriting {
+  color: var(--black_900_01) !important;
+  margin-left: 74px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.title {
+  margin-top: 38px;
+  padding-left: 74px;
+  padding-right: 56px;
+  gap: var(--space-sm);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1440px) {
+    padding-left: 32px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.input_one {
+  height: 40px;
+  margin-bottom: 8px;
+  background-color: var(--white_a700);
+  align-self: stretch;
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--blue_gray_100_01);
+}
+
+.task {
+  margin-top: 36px;
+  gap: var(--space-sm);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: start;
+  padding: var(--space-sm) 56px var(--space-sm) 74px;
+  @media only screen and (max-width: 1440px) {
+    padding-left: 32px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.input_three {
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: var(--white_a700);
+  align-self: stretch;
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--blue_gray_100_01);
+}
+
+
+
+/* Updated styles for radio buttons and text alignment */
+.radiocheckbox {
+  display: flex;
+  align-items: center; /* Aligns the radio button with the text */
+  gap: 10px; /* Adds space between the radio button and the text */
+}
+
+.radiocheckbox-6 {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--blue_gray_500);
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.radiocheckbox-6.checked {
+  background-color: var(--blue_gray_500);
+}
+
+/* Align the text next to the radio button */
+.radiocheckbox p {
+  margin: 0; /* Removes default margin from the paragraph */
+  font-size: 16px;
+  line-height: 1; /* Ensures consistent line height with the radio button */
+}
+
+.mywork {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input_five {
+  height: 242px;
+  width: 100%;
+  max-width: 850px;
+  margin-top: 12px;
+  background-color: var(--white_a700);
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--blue_gray_100_01);
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Ensure the column fits within the frame and centers its content */
+.column {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: var(--blue_gray_50);
+  box-shadow: var(--shadow-xs);
+  width: 100%;
+  max-width: 1200px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--white_a700);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columnsubmitwri {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adjust other sections to maintain consistency */
+.title,
+.task {
+  width: 100%;
+  max-width: 850px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .input_five,
+  .title,
+  .task,
+  .columnsubmitwri {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .input_five,
+  .title,
+  .task,
+  .columnsubmitwri {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.whatareyou {
+  margin-top: 26px;
+  margin-left: 74px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.gridremember_me {
+  margin-top: 26px;
+  margin-left: 86px;
+  margin-right: 84px;
+  align-self: stretch;
+  display: grid;
+  gap: 40px;
+  row-gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  @media only screen and (max-width: 1440px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media only screen and (max-width: 1050px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.get_started {
+  color: var(--black_900);
+  margin-top: 44px;
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 19px;
+  align-self: center;
+  background-color: var(--deep_purple_a200_bc);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  height: 54px;
+  min-width: 298px;
+  border-radius: var(--radius-sm);
+  @media only screen and (max-width: 1440px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
