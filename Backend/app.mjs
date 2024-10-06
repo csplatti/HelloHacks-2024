@@ -66,6 +66,10 @@ app.post("/", async (req, res) => {
   console.log(feedback);
 
   //console.log(parcel);
+  //   return res.status(200).send({
+  //     status: "received",
+  //     feedback: feedback /*feedback: feedbackPipeline(essay, criteria)*/,
+  //   });
   return res.status(200).send({
     status: "received",
     feedback: feedback /*feedback: feedbackPipeline(essay, criteria)*/,

@@ -21,6 +21,7 @@ submit.addEventListener("click", whenSubmitEssay);
 
 const baseUrl = "http://localhost:8080/";
 async function whenSubmitEssay(e) {
+  document.getElementById("response_container").innerHTML = "";
   let criteria = [];
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
@@ -49,7 +50,7 @@ async function whenSubmitEssay(e) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data.feedback);
-      //document.getElementById("response_container").innerHTML = data.feedback;
+      document.getElementById("response_container").innerHTML = data.feedback;
       return data.feedback;
     })
     .catch((error) => {
