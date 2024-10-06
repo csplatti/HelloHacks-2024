@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { api_key } from "../hide-api-key.js";
+import { api_key } from "../../hide-api-key.js";
 
 const openai = new OpenAI({
   apiKey: api_key,
