@@ -261,26 +261,7 @@ body {
   border: 0.5px solid var(--blue_gray_100_01);
 }
 
-.mywork {
-  margin-top: 22px;
-  padding-left: 74px;
-  padding-right: 56px;
-  align-self: stretch;
-  display: flex;
-  @media only screen and (max-width: 1440px) {
-    padding-left: 32px;
-  }
 
-  @media only screen and (max-width: 1050px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media only screen and (max-width: 550px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
 
 /* Updated styles for radio buttons and text alignment */
 .radiocheckbox {
@@ -310,20 +291,79 @@ body {
   line-height: 1; /* Ensures consistent line height with the radio button */
 }
 
-.input_five {
-  height: 242px;
-  width: 800px;
-  margin-top: 12px;
-  margin-left: 74px;
-  background-color: var(--white_a700);
-  
-  border-radius: var(--radius-sm);
-  border: 0.5px solid var(--blue_gray_100_01);
-  /*@media only screen and (max-width: 1050px) {
-    margin-left: 0px;
-  }*/
+.mywork {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.input_five {
+  height: 242px;
+  width: 100%;
+  max-width: 850px;
+  margin-top: 12px;
+  background-color: var(--white_a700);
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--blue_gray_100_01);
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Ensure the column fits within the frame and centers its content */
+.column {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: var(--blue_gray_50);
+  box-shadow: var(--shadow-xs);
+  width: 100%;
+  max-width: 1200px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--white_a700);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columnsubmitwri {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adjust other sections to maintain consistency */
+.title,
+.task {
+  width: 100%;
+  max-width: 850px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .input_five,
+  .title,
+  .task,
+  .columnsubmitwri {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .input_five,
+  .title,
+  .task,
+  .columnsubmitwri {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .whatareyou {
   margin-top: 26px;
   margin-left: 74px;
