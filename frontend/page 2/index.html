@@ -99,7 +99,7 @@
             <div class="mywork">
               <p class="label ui text size-texts">My Work</p>
             </div>
-            <textarea class="input_five"></textarea>
+            <textarea class="input_five" id="myWorkTextArea" placeholder="Enter your work here"></textarea>
             <h2 class="whatareyou ui heading size-headingxs">What are you looking for feedback on?</h2>
             <div class="gridremember_me">
               <div class="tone">
@@ -130,7 +130,7 @@
                 <div class="checkboxesand">
                   <div class="radiocheckbox">
                     <div class="radiocheckbox-6" onclick="toggleCheckbox(this)"></div>
-                    <p class="ui text size-texts">Adresses Prompt</p>
+                    <p class="ui text size-texts">Addresses Prompt</p>
                   </div>
                 </div>
               </div>
@@ -151,7 +151,8 @@
                 </div>
               </div>
             </div>
-            <button class="flex-row-center-center get_started" onclick="window.location.href='../Updated page3/index.html'">Get Started!</button>
+            <!-- Pass the "My Work" content as a URL parameter to Page 3 -->
+            <button class="flex-row-center-center get_started" onclick="redirectToPage3()">Get Started!</button>
           </div>
         </div>
       </div>
@@ -160,6 +161,12 @@
     <script>
       function toggleCheckbox(element) {
         element.classList.toggle('checked');
+      }
+
+      // Function to pass "My Work" content to Page 3 via URL parameter
+      function redirectToPage3() {
+        const myWorkContent = document.getElementById('myWorkTextArea').value;
+        window.location.href = `../Updated page3/index.html?work=${encodeURIComponent(myWorkContent)}`;
       }
     </script>
   </body>

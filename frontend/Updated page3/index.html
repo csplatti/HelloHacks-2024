@@ -24,7 +24,7 @@
         </div>
         <div class="frame">
           <div class="overlap">
-            <div class="feedback-text">test</div>
+            <div id="feedbackText" class="feedback-text">test</div> <!-- This will not be replaced -->
             <div class="feedback-title">Feedback</div>
           </div>
         </div>
@@ -32,13 +32,27 @@
           <div class="overlap-2">
             <div class="feedback-text-box"></div>
             <div class="submit-button">
-                < <button class="button" onclick="window.location.href='../page 2/index.html'">Write a &lt;Second&gt; Attempt</button>
+              <button class="button" onclick="window.location.href='../page 2/index.html'">Write a &lt;Second&gt; Attempt</button>
             </div>
             <div class="assignment-name">Assignment Name</div>
-            <div class="assignment-text">test</div>
+            <div id="assignmentText" class="assignment-text">test</div> <!-- This will be replaced -->
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      // Function to retrieve the 'work' parameter from the URL
+      function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('work'); // Get the 'work' parameter from the URL
+      }
+
+      // Retrieve the 'work' data and update only the 'assignmentText' div
+      const workContent = getQueryParams();
+      if (workContent) {
+        document.getElementById('assignmentText').textContent = decodeURIComponent(workContent); // Replace 'test' in assignment-text
+      }
+    </script>
   </body>
 </html>
