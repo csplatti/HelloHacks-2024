@@ -18,13 +18,14 @@ async function main() {
 
 //main();
 
-function getPrompt(essay, criteria) {
+function getPrompt(essay, description, criteria) {
   return `
-        Your job is to grade english papers written by college students and provide feedback that is requested by them. Refer to the student who wrote the paper in the second person, and provide honest feedback even if it is negative.
+        Your job is to grade english papers written by college students and provide feedback that is requested by them. Provide feedback on each specific criteria given below and refer to the student in the second person.
 
-        You will be provided the essay and criteria in the back-ticks below:
+        You will be provided the essay, a description of the essay assignment, and criteria in the back-ticks below:
 
         Essay: {${essay}}
+        Description: {${description}}
         Criteria: {${criteria}}
 
         Your Feedback:
@@ -48,8 +49,8 @@ async function getFeedback(prompt) {
   //   return stream;
 }
 
-async function feedbackPipeline(essay, criteria) {
-  return getFeedback(getPrompt(essay, criteria));
+async function feedbackPipeline(essay, description, criteria) {
+  return getFeedback(getPrompt(essay, description, criteria));
 }
 
 // TESTING

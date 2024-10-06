@@ -41,7 +41,8 @@ async function whenSubmitEssay(e) {
     body: JSON.stringify({
       parcel: {
         essay: encodeURIComponent(essay.value),
-        criteria: encodeURIComponent(description.value),
+        description: encodeURIComponent(description.value),
+        criteria: encodeURIComponent(String(criteria.value)),
       },
     }),
   })

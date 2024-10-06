@@ -56,11 +56,12 @@ app.post("/", async (req, res) => {
   const { parcel } = req.body;
   let essay = decodeURIComponent(parcel.essay);
   let criteria = decodeURIComponent(parcel.criteria);
+  let description = decodeURIComponent(parcel.description);
   if (!parcel) {
     return res.status(400).send({ status: "failed" });
   }
 
-  const feedback = await feedbackPipeline(essay, criteria);
+  const feedback = await feedbackPipeline(essay, description, criteria);
 
   console.log(feedback);
 
