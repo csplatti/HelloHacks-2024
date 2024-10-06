@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { api_key } from "/etc/secrets/hide-api-key.mjs";
+import { api_key } from "../../hide-api-key.mjs";
 
 const openai = new OpenAI({
   apiKey: api_key,
