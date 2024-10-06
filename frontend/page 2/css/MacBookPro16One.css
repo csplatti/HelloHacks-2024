@@ -1,0 +1,199 @@
+/*=========== TABLE OF CONTENTS ===========
+1. Common CSS
+2. Page CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Common CSS
+--------------------------------------*/
+.menu {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.input_one {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  background-color: var(--white_a700);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  border: 0.5px solid var(--blue_gray_100);
+}
+
+/*-------------------------------------
+  2. Page CSS
+--------------------------------------*/
+.macbook-pro-16 {
+  background-color: var(--white_a700);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.sidepanel {
+  background-color: var(--blue_gray_100);
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-sm);
+}
+
+.megaphone_one {
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.assignment {
+  margin-top: 58px;
+  margin-left: 24px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.submissioncount {
+  color: var(--black_900) !important;
+  margin-top: 4px;
+  margin-bottom: 954px;
+  margin-left: 102px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.column {
+  margin-bottom: 24px;
+  margin-right: 292px;
+  align-self: end;
+  background-color: var(--gray_50);
+  box-shadow: var(--shadow-xs);
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 68px 56px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--white_a700);
+  @media only screen and (max-width: 1440px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    align-self: auto;
+    width: 100%;
+    margin-right: 0px;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 16px 20px;
+  }
+}
+
+.columnsubmitwri {
+  margin-bottom: 4px;
+  gap: 38px;
+  display: flex;
+  width: 94%;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.submitwriting {
+  color: var(--black_900) !important;
+}
+
+.columnlabel {
+  gap: var(--space-xs);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: start;
+}
+
+.columnlabel_one {
+  margin-top: 56px;
+  gap: var(--space-xs);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: start;
+}
+
+.label_two {
+  margin-top: 54px;
+}
+
+.input_five {
+  margin-top: 12px;
+  background-color: var(--white_a700);
+  align-self: stretch;
+  height: 242px;
+  padding: var(--space-sm);
+  border-radius: var(--radius-xs);
+  border: 0.5px solid var(--blue_gray_100);
+}
+
+.whatareyou {
+  color: var(--black_900) !important;
+  margin-top: 26px;
+}
+
+.submit {
+  color: var(--white_a700);
+  margin-top: 74px;
+  padding-left: 33px;
+  padding-right: 33px;
+  font-size: 18px;
+  background-color: var(--black_900);
+  align-self: stretch;
+  text-align: center;
+  height: 42px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--black_900);
+  @media only screen and (max-width: 1440px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
