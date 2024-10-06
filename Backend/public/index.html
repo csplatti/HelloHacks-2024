@@ -1,15 +1,172 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-    <script src="scriptTEST.js" defer></script>
-    <link rel="icon" href="data:,">
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic HTML website.</p>
-    <input id="essay_input" type="text" style="width: 80%; height: 400px; text-wrap: wrap">
-    <button id="button">SUBMIT</button>
-    <div id="response_container" style="width: 80%; height: 400px; color: black; border: 1px solid black; white-space: pre-wrap;"></div>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Macbook Pro 16" - 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <img
+      alt="Logo"
+      src="https://appproject.dhiwise.com/dhiwise-logo.png?c=&v="
+      style="width: 0px; height: 0px; display: none"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/components.css" />
+    <script src="script.js" defer></script>
+    <style>
+      /* Additional CSS for button hover and radio buttons */
+      .get_started {
+        color: var(--black_900);
+        margin-top: 44px;
+        padding-left: 34px;
+        padding-right: 34px;
+        font-size: 19px;
+        align-self: center;
+        background-color: var(--deep_purple_a200_bc);
+        box-shadow: var(--shadow-sm);
+        text-align: center;
+        height: 54px;
+        min-width: 298px;
+        border-radius: var(--radius-sm);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .get_started:hover {
+        background-color: var(--deep_purple_a200);
+      }
+
+      .radiocheckbox-6 {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--blue_gray_500);
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .radiocheckbox-6.checked {
+        background-color: var(--blue_gray_500);
+      }
+
+      /* Updated styles for input areas */
+      .input_one,
+      .input_three,
+      .input_five {
+        border: 1px solid var(--blue_gray_100_01);
+        background-color: var(--white_a700);
+        border-radius: var(--radius-sm);
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .input_one,
+      .input_three {
+        height: 40px;
+      }
+
+      .input_five {
+        height: 242px;
+        resize: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="macbook-pro-16">
+      <div class="sidepanel">
+        <div class="menu">
+        </div>
+        <h1 class="assignment ui heading size-headingxs">Assignment Title</h1>
+        <p class="submissioncount ui text size-texts">Submission 1</p>
+      </div>
+      <div class="column_one">
+        <div class="column">
+          <div class="columnsubmitwri">
+            <p class="submitwriting ui text size-textmd">Submit Writing</p>
+            <div class="title">
+              <p class="label ui text size-texts">Title</p>
+              <input type="text" class="input_one" placeholder="Enter title">
+            </div>
+            <div class="task">
+              <p class="label ui text size-texts">Task Description</p>
+              <input type="text" class="input_three" placeholder="Enter task description">
+            </div>
+            <div class="mywork">
+              <p class="label ui text size-texts">My Work</p>
+            </div>
+            <textarea class="input_five"></textarea>
+            <h2 class="whatareyou ui heading size-headingxs">What are you looking for feedback on?</h2>
+            <div class="gridremember_me">
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="tone" id="tone" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Tone</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="clarity" id="clarity" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Clarity</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="detail" id="detail" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Detail</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="addresses prompt" id="addresses prompt" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Adresses Prompt</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="Argument Strength" id="Argument Strength" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Argument Strength</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tone">
+                <div class="checkboxesand">
+                  <div class="radiocheckbox">
+                    <input type="checkbox" value="cohesion" id="cohesion" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
+                    <p class="ui text size-texts">Cohesion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="submit" class="flex-row-center-center get_started">Get Started!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column_one">
+      <p class="submitwriting ui text size-textmd">Your Feedback</p>
+      <div id="response_container" style="white-space: pre-wrap; left: 30%; font-family: inter"></div>
+    </div>
+
+    <script>
+      function toggleCheckbox(element) {
+        element.classList.toggle('checked');
+      }
+    </script>
+  </body>
 </html>
