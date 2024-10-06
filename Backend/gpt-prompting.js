@@ -48,6 +48,10 @@ async function getFeedback(prompt) {
   //   return stream;
 }
 
+async function feedbackPipeline(essay, criteria) {
+  return getFeedback(getPrompt(essay, criteria));
+}
+
 // TESTING
 let badEssay = `
 William Shakespeare’s play "The Tempest" is, like, totally a wild ride from start to finish. It’s, like, this story about this dude named Prospero who’s, like, stuck on this island with his daughter Miranda, and he’s, like, all bitter because his bro stole his dukedom and left him and Miranda to, like, die at sea. So, Prospero uses his mad magic skills to, like, summon this storm to bring his bro and all these other dudes to the island.
@@ -61,6 +65,8 @@ And, like, the ending is all about forgiveness and stuff. Prospero forgives his 
 Overall, "The Tempest" is, like, this crazy play with, like, magic and romance and forgiveness and all this other deep stuff. Shakespeare, man, he really knew how to, like, mix it up and keep you guessing. So, yeah, it’s, like, a totally wild ride and stuff.
 `;
 
-let out = await getFeedback(getPrompt(badEssay, "formal tone"));
+let out = await feedbackPipeline(badEssay, "formal tone");
 
 console.log(out);
+
+export { feedbackPipeline };
