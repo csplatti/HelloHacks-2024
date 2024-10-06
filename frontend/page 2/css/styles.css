@@ -8,24 +8,38 @@
 --------------------------------------*/
 :root {
   /*------Color variables------*/
-  --black_900: #000000;
+  --black_900: #080020;
+  --black_900_01: #000000;
   --black_900_26: #00000026;
-  --blue_gray_100: #d9d9d9;
-  --gray_50: #fbf7f7;
+  --black_900_3f: #0000003f;
+  --blue_gray_100: #cfd4dc;
+  --blue_gray_100_01: #d9d9d9;
+  --blue_gray_50: #efeef1;
+  --blue_gray_500: #667084;
+  --blue_gray_800: #344053;
+  --cyan_800: #038c8c;
+  --deep_purple_a200_bc: #7b47ffbc;
   --gray_800: #49454f;
   --gray_900: #1e1e1e;
+  --gray_900_0c: #1018280c;
   --white_a700: #ffffff;
 
   /*------Shadow variables------*/
   --shadow-xs: 0 2px 6px 2px #00000026;
+  --shadow-sm: 0 4px 4px 0 #0000003f;
+  --shadow-md: 0 1px 2px 0 #1018280c;
 
   /*------Border radius variables------*/
-  --radius-xs: 8px;
-  --radius-sm: 20px;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
 
   /*------Spacing variables------*/
-  --space-xs: 10px;
-  --space-sm: 12px;
+  --space-xs: 2px;
+  --space-sm: 10px;
+  --space-md: 12px;
+  --space-lg: 14px;
 }
 
 /*-------------------------------------

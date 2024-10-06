@@ -12,3 +12,10 @@
   font-family: "Inter";
   font-weight: 400;
 }
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../public/fonts/MulishRegular.ttf");
+  font-family: "Mulish";
+  font-weight: 400;
+}

@@ -7,6 +7,14 @@
   1. Text CSS
 --------------------------------------*/
 .ui.text.size-textxs {
+  font-size: 17px;
+  font-weight: 400;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
+}
+
+.ui.text.size-texts {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -15,7 +23,7 @@
   }
 }
 
-.ui.text.size-texts {
+.ui.text.size-textmd {
   font-size: 22px;
   font-weight: 400;
   font-style: normal;
@@ -42,6 +50,6 @@
 }
 
 .ui.heading {
-  color: var(--black_900);
+  color: var(--black_900_01);
   font-family: Inter;
 }

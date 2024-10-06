@@ -1,56 +1,66 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Inter;
+/*=========== TABLE OF CONTENTS ===========
+1. Common CSS
+2. Page CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Common CSS
+--------------------------------------*/
+.label {
+  color: var(--gray_900) !important;
 }
 
-* {
-  box-sizing: border-box;
-  line-height: normal;
-  font-family: inherit;
-  margin: unset;
-}
-
-input {
-  background-color: transparent;
+.tone {
   width: 100%;
+  display: flex;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.checkboxesand {
+  margin-bottom: 4px;
+  background-color: var(--white_a700);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  padding: var(--space-sm);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--blue_gray_100);
 }
 
-[type="text"],
-input:where(:not([type])),
-[type="email"],
-[type="url"],
-[type="password"],
-[type="number"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="search"],
-[type="tel"],
-[type="time"],
-[type="week"],
-[multiple],
-textarea,
-select,
-button {
-  appearance: none;
-  background-color: transparent;
-  border-color: unset;
-  border-width: 0;
-  border-radius: unset;
-  padding: unset;
-  font-size: unset;
-  line-height: unset;
-  color: inherit;
+.radiocheckbox-6 {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%; /* Make it circular */
+  border: 1px solid var(--blue_gray_500);
+  display: inline-block; /* Make it inline */
+  position: relative; /* Position for the inner circle */
+  cursor: pointer; /* Change cursor to pointer */
 }
-input:focus-visible,
-[multiple]:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: none;
+
+.radiocheckbox-6.checked {
+  background-color: var(--blue_gray_500); /* Change background when checked */
+}
+
+.input_one,
+.input_three,
+.input_five {
+  border: 1px solid var(--blue_gray_100_01);
+  contenteditable: true; /* Make the divs editable */
+}
+
+.radiocheckbox-6::after {
+  content: '';
+  display: block;
+  width: 10px; /* Inner circle size */
+  height: 10px; /* Inner circle size */
+  border-radius: 50%; /* Make it circular */
+  background-color: var(--white); /* Inner circle color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the inner circle */
+  visibility: hidden; /* Hide by default */
+}
+
+.radiocheckbox-6.checked::after {
+  visibility: visible; /* Show inner circle when checked */
+  background-color: var(--deep_purple_a200); /* Inner circle color */
 }
