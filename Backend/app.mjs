@@ -21,9 +21,31 @@ const app = express();
 const port = 8080;
 
 app.use(express.static("public"));
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.status(200).send("<h1>hi<h1>");
+app.get("/:dynamic", (req, res) => {
+  const { dynamic } = req.params;
+  const { key } = req.query;
+  console.log(dynamic, key);
+  res.status(200).send(dynamic, key);
+});
+
+app.post("/", async (req, res) => {
+  const { parcel } = req.body;
+  let essay = decodeURIComponent(parcel.essay);
+  let criteria = decodeURIComponent(parcel.criteria);
+  if (!parcel) {
+    return res.status(400).send({ status: "failed" });
+  }
+
+  const feedback = await feedbackPipeline(essay, criteria);
+
+  console.log(feedback);
+
+  //console.log(parcel);
+  return res.status(200).send({
+    status: "received" /*feedback: feedbackPipeline(essay, criteria)*/,
+  });
 });
 
 app.listen(port, () => console.log(`Server has started on port ${port}`));
