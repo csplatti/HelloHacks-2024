@@ -1,0 +1,259 @@
+.desktop {
+  background-color: #fff5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .div {
+  background-color: #fff5f5;
+  width: 1728px;
+  height: 1117px;
+  position: relative;
+}
+
+.desktop .side-panel {
+  position: absolute;
+  width: 312px;
+  height: 1117px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.desktop .overlap-group {
+  position: relative;
+  width: 368px;
+  height: 1117px;
+  background-color: #d9d9d9;
+}
+
+.desktop .text-wrapper {
+  width: 254px;
+  top: 115px;
+  left: 28px;
+  font-weight: 700;
+  color: #49454f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+}
+
+.desktop .text-wrapper-2 {
+  position: absolute;
+  width: 154px;
+  top: 142px;
+  left: 107px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #49454f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.desktop .menu-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+}
+
+.desktop .menu {
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.desktop .container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.desktop .state-layer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.desktop .frame {
+  width: 706px;
+  left: 1022px;
+  position: absolute;
+  height: 1117px;
+  top: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.desktop .overlap {
+  position: relative;
+  width: 804px;
+  height: 2065px;
+  top: -43px;
+  left: -70px;
+  background-color: #08001fd9;
+}
+
+.desktop .feedback-text {
+  width: 528px;
+  top: 204px;
+  left: 159px;
+  color: #ffffffcc;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  line-height: 16.8px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+}
+
+.desktop .feedback-title {
+  width: 221px;
+  top: 133px;
+  left: 97px;
+  color: #ffffff;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: -1.02px;
+  line-height: 40.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+}
+
+.desktop .overlap-wrapper {
+  width: 709px;
+  left: 313px;
+  position: absolute;
+  height: 1117px;
+  top: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.desktop .overlap-2 {
+  position: relative;
+  width: 837px;
+  height: 1914px;
+  top: -24px;
+  left: -90px;
+}
+
+.desktop .feedback-text-box {
+  position: absolute;
+  width: 801px;
+  height: 1914px;
+  top: 0;
+  left: 36px;
+  background-color: #ffffffd9;
+}
+
+.desktop .submit-button {
+  display: flex;
+  width: 674px;
+  height: 38px;
+  align-items: stretch;
+  gap: var(--size-space-400);
+  padding: 0px 75px;
+  position: absolute;
+  top: 1038px;
+  left: 125px;
+  border-radius: 8px;
+}
+
+.desktop .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-space-200);
+  padding: var(--size-space-300);
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  background-color: #543f86;
+  border-radius: var(--size-radius-200);
+  overflow: hidden;
+  border: 1px solid;
+  color: white;
+}
+
+.desktop .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: var(--m3-schemes-on-primary);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.desktop .assignment-name {
+  position: absolute;
+  width: 584px;
+  top: 114px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #2d2540;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: -1.02px;
+  line-height: 40.8px;
+}
+
+.desktop .assignment-text {
+  width: 584px;
+  top: 195px;
+  left: 153px;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  line-height: 16.8px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+}
