@@ -78,27 +78,31 @@
     </style>
   </head>
   <body>
+    <header class="site-header">
+      <h1 class="app-title">refine</h1>
+      <p class="app-subtitle">AI that polishes your prose—turn rough drafts into compelling essays faster.</p>
+    </header>
     <div class="macbook-pro-16">
-      <div class="sidepanel" style="height:100%">
+      <!-- <div class="sidepanel" style="height:100%">
         <div class="menu">
         </div>
         <h1 class="assignment ui heading size-headingxs">Assignment Title</h1>
         <p class="submissioncount ui text size-texts">Submission 1</p>
-      </div>
+      </div> -->
       <div class="column_one">
         <div class="column">
           <div class="columnsubmitwri">
             <p class="submitwriting ui text size-textmd">Submit Writing</p>
             <div class="title">
-              <p class="label ui text size-texts">Title</p>
+              <p class="label ui text size-texts">Assignment Title</p>
               <input type="text" class="input_one" placeholder="Enter title">
             </div>
             <div class="task">
-              <p class="label ui text size-texts">Task Description</p>
+              <p class="label ui text size-texts">Assignment Description</p>
               <input type="text" class="input_three" placeholder="Enter task description">
             </div>
             <div class="mywork">
-              <p class="label ui text size-texts">My Work</p>
+              <p class="label ui text size-texts">Your Current Draft</p>
             </div>
             <textarea class="input_five"></textarea>
             <h2 class="whatareyou ui heading size-headingxs">What are you looking for feedback on?</h2>
@@ -131,7 +135,7 @@
                 <div class="checkboxesand">
                   <div class="radiocheckbox">
                     <input type="checkbox" value="addresses prompt" id="addresses prompt" class="radiocheckbox-6" onclick="toggleCheckbox(this)">
-                    <p class="ui text size-texts">Adresses Prompt</p>
+                    <p class="ui text size-texts">Addresses Prompt</p>
                   </div>
                 </div>
               </div>
@@ -154,7 +158,7 @@
             </div>
             <button id="submit" class="flex-row-center-center get_started">Get Started!</button>
               <p class="ui text size-textmd">Your Feedback</p>
-              <div id="response_container" style="white-space: pre-wrap; left: 30%; font-family: inter"></div>
+              <div id="response_container" class="feedback-output" style="white-space: pre-wrap; font-family: inter"></div>
           </div>
         </div>
       </div>

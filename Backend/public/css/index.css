@@ -475,3 +475,220 @@ body {
   }
 }
 
+/* New header styles (updated for white background & visible title) */
+.site-header {
+  padding: 48px 24px 8px;
+  text-align: center;
+  background: var(--white_a700);
+  border-bottom: 1px solid var(--blue_gray_100);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--deep_purple_a200); /* Use solid color for visibility */
+  font-family: Inter, sans-serif;
+}
+
+.app-subtitle {
+  margin: 14px auto 0;
+  max-width: 840px;
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--blue_gray_800);
+  font-family: Inter, sans-serif;
+  padding: 0 8px;
+}
+
+/* Optional gradient variant if you want to re-enable it later */
+.app-title.gradient {
+  background: linear-gradient(90deg, var(--deep_purple_a200), var(--blue_gray_800));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .app-title { font-size: 46px; }
+  .app-subtitle { font-size: 18px; }
+}
+@media (max-width: 550px) {
+  .app-title { font-size: 38px; }
+  .app-subtitle { font-size: 16px; }
+}
+
+/* ---- Overrides & layout refinements ---- */
+
+/* 1. Header: remove line & reduce vertical space slightly */
+.site-header {
+  border-bottom: none;
+  padding: 40px 20px 0;
+}
+
+/* 2. Unified form container widths */
+.columnsubmitwri,
+.title,
+.task,
+.mywork,
+.input_five,
+.gridremember_me,
+.whatareyou,
+.submitwriting {
+  max-width: 760px;
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0;
+}
+
+/* 3. Center primary section heading; keep internal labels left-aligned */
+.submitwriting,
+.whatareyou {
+  text-align: center;
+}
+
+/* 4. Vertical spacing rhythm */
+.title { margin-top: 32px; }
+.task { margin-top: 28px; padding: 0; }
+.mywork { margin-top: 28px; }
+.whatareyou { margin-top: 40px; }
+.gridremember_me { margin-top: 24px; }
+
+/* 5. Inputs: consistent styling */
+.title .input_one,
+.task .input_three,
+.input_five {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.input_five {
+  min-height: 280px;
+  height: 320px;
+  resize: vertical;
+}
+
+/* 6. Checkbox grid: responsive auto-fit */
+.gridremember_me {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px 24px;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: stretch;
+}
+
+.checkboxesand {
+  height: auto;
+  padding: 10px 14px;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+/* 7. Checkbox alignment refinement */
+.radiocheckbox {
+  gap: 8px;
+}
+
+.radiocheckbox-6 {
+  flex-shrink: 0;
+}
+
+/* 8. Button spacing */
+.get_started {
+  margin-top: 40px;
+}
+
+/* 9. Feedback output styling */
+.feedback-output {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 760px;
+  background: var(--white_a700);
+  border: 1px solid var(--blue_gray_100_01);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+/* 10. Responsive tweaks */
+@media (max-width: 900px) {
+  .site-header { padding-top: 32px; }
+  .app-title { font-size: 48px; }
+  .get_started { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .app-title { font-size: 40px; }
+  .feedback-output { min-height: 100px; }
+  .gridremember_me { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 440px) {
+  .gridremember_me { grid-template-columns: 1fr; }
+  .app-title { font-size: 34px; }
+}
+
+/* ---- Compact spacing adjustments ---- */
+.column {
+  padding-top: 40px !important;
+  padding-bottom: 48px !important;
+}
+
+.columnsubmitwri {
+  gap: 0;
+}
+
+.submitwriting {
+  margin-top: 0 !important;
+  margin-bottom: 8px;
+}
+
+.title { margin-top: 16px !important; }
+.task { margin-top: 20px !important; }
+.mywork { margin-top: 20px !important; }
+.whatareyou { margin-top: 32px !important; }
+
+.title .input_one,
+.task .input_three {
+  height: 38px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.input_five {
+  min-height: 240px !important;
+  height: 260px !important;
+}
+
+.gridremember_me { margin-top: 20px !important; }
+
+.get_started {
+  margin-top: 32px !important;
+}
+
+.feedback-output {
+  margin-top: 24px !important;
+  min-height: 100px;
+}
+
+/* Slightly reduce header bottom space to pull content up */
+.site-header {
+  padding-bottom: 0 !important;
+}
+
+/* Mobile fine-tune */
+@media (max-width: 600px) {
+  .column { padding-top: 32px !important; padding-bottom: 40px !important; }
+  .whatareyou { margin-top: 28px !important; }
+  .get_started { margin-top: 28px !important; }
+}
+
