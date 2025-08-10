@@ -20,6 +20,14 @@ checkboxes.forEach((checkbox) => {
 submit.addEventListener("click", whenSubmitEssay);
 
 const baseUrl = "http://localhost:8080/";
+
+function renderMarkdown(mdText) {
+  const container = document.getElementById("response_container");
+  if (!container) return;
+  const html = DOMPurify.sanitize(marked.parse(mdText || ""));
+  container.innerHTML = html;
+}
+
 async function whenSubmitEssay(e) {
   document.getElementById("response_container").innerHTML =
     "Awaiting Response...";
@@ -51,7 +59,7 @@ async function whenSubmitEssay(e) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data.feedback);
-      document.getElementById("response_container").innerHTML = data.feedback;
+      renderMarkdown(data.feedback);
       return data.feedback;
     })
     .catch((error) => {

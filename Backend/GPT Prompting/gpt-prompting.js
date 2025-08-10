@@ -85,4 +85,6 @@ Overall, "The Tempest" is, like, this crazy play with, like, magic and romance a
 
 //console.log(out);
 
+// When sending to frontend, ensure the raw markdown string is passed; frontend handles rendering.
+
 export { feedbackPipeline };
