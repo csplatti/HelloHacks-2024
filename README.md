@@ -1,6 +1,6 @@
 # Refine
 ## Overview
-Ever struggled to find feedback for your written assignments? Meet Refine – your personal AI peer editor, ready to help!
+Have you ever struggled to find available professors and peers to provide feedback on your written assignments? Meet Refine – your personal AI peer editor, ready to help!
 
 Refine was developed during HelloHacks 2024, a hackathon hosted at The University of British Columbia by [UBC Biztech](https://www.ubcbiztech.com/).
 
