@@ -1,10 +1,10 @@
-# Refine
-## Overview
+# Refine ✏️🔧
+## Overview 
 Have you ever struggled to find available professors and peers to provide feedback on your written assignments? Meet Refine – your personal AI peer editor, ready to help!
 
 Refine was developed during HelloHacks 2024, a hackathon hosted at The University of British Columbia by [UBC Biztech](https://www.ubcbiztech.com/).
 
-## Installation
+## Installation 💾
 1. Clone this repository into a directory of your choice
 2. Open ```./.env.example```
 3. Replace "replace_me" with an OpenAI API key
@@ -12,7 +12,7 @@ Refine was developed during HelloHacks 2024, a hackathon hosted at The Universit
 5. Navigate to ```./Backend/gpt-prompting``` in your terminal
 6. Run ```npm install```
 
-## Usage
+## Usage 🧑‍💻
 1. Navigate to ```./Backend``` in your terminal
 2. Run ```node app.mjs```
 3. Navigate to ```localhost:8080``` to view the webapp
