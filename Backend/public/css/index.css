@@ -23,6 +23,21 @@
   padding: var(--space-sm);
   border-radius: var(--radius-lg);
   border: 1px solid var(--blue_gray_100);
+  transition: border-color .18s, box-shadow .18s, background .25s;
+  cursor: pointer;
+}
+.checkboxesand:hover {
+  border-color: var(--deep_purple_a200);
+  box-shadow: 0 4px 14px -6px rgba(50, 30, 120, .25);
+}
+.checkboxesand:active {
+  transform: translateY(1px);
+}
+
+/* Focus ring for whole clickable checkbox cards */
+.checkboxesand:focus {
+  outline: 2px solid var(--deep_purple_a200);
+  outline-offset: 3px;
 }
 
 .radiocheckbox-6 {
@@ -30,21 +45,18 @@
   width: 20px;
   border-radius: 50%; /* Make it circular */
   border: 1px solid var(--blue_gray_500);
-  display: inline-block; /* Make it inline */
+  display: inline-flex; /* Make it inline */
+  align-items: center;
+  justify-content: center;
   position: relative; /* Position for the inner circle */
   cursor: pointer; /* Change cursor to pointer */
+  background: #fff;
 }
 
 .radiocheckbox-6.checked {
-  background-color: var(--blue_gray_500); /* Change background when checked */
-}
-
-.input_one,
-.input_three,
-.input_five {
-  border: 1px solid var(--blue_gray_100_01);
-  font-family: "Inter";
-  /* contenteditable: true; Make the divs editable */
+  background: var(--deep_purple_a200);
+  border-color: var(--deep_purple_a200);
+  box-shadow: 0 0 0 3px rgba(129, 94, 255, .25);
 }
 
 .radiocheckbox-6::after {
@@ -63,7 +75,7 @@
 
 .radiocheckbox-6.checked::after {
   visibility: visible; /* Show inner circle when checked */
-  background-color: var(--deep_purple_a200); /* Inner circle color */
+  background-color: #fff; /* Inner circle color */
 }
 
 .tone {
@@ -75,6 +87,8 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .checkboxesand {
@@ -250,9 +264,20 @@ body {
 .submitwriting {
   color: var(--black_900_01) !important;
   margin-left: 74px;
+  position: relative;
   @media only screen and (max-width: 1050px) {
     margin-left: 0px;
   }
+}
+.submitwriting:after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  background: var(--deep_purple_a200);
+  opacity: .4;
 }
 
 .title {
@@ -286,6 +311,16 @@ body {
   align-self: stretch;
   border-radius: var(--radius-sm);
   border: 0.5px solid var(--blue_gray_100_01);
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.input_one:focus {
+  outline: none;
+  border-color: var(--deep_purple_a200);
+  box-shadow: 0 0 0 3px rgba(129, 94, 255, .25);
+}
+.input_one::placeholder {
+  color: var(--blue_gray_500);
+  opacity: .9;
 }
 
 .task {
@@ -318,9 +353,17 @@ body {
   align-self: stretch;
   border-radius: var(--radius-sm);
   border: 0.5px solid var(--blue_gray_100_01);
+  transition: border-color .18s ease, box-shadow .18s ease;
 }
-
-
+.input_three:focus {
+  outline: none;
+  border-color: var(--deep_purple_a200);
+  box-shadow: 0 0 0 3px rgba(129, 94, 255, .25);
+}
+.input_three::placeholder {
+  color: var(--blue_gray_500);
+  opacity: .9;
+}
 
 /* Updated styles for radio buttons and text alignment */
 .radiocheckbox {
@@ -368,6 +411,18 @@ body {
   border: 0.5px solid var(--blue_gray_100_01);
   box-sizing: border-box;
   resize: vertical;
+  line-height: 1.5;
+  transition: box-shadow .18s ease;
+  font-feature-settings: "liga" 1;
+}
+.input_five:focus {
+  outline: none;
+  border-color: var(--deep_purple_a200);
+  box-shadow: 0 0 0 3px rgba(129, 94, 255, .25);
+}
+.input_five::placeholder {
+  color: var(--blue_gray_500);
+  opacity: .9;
 }
 
 /* Ensure the column fits within the frame and centers its content */
@@ -453,23 +508,42 @@ body {
 }
 
 .get_started {
-  color: var(--black_900);
+  color: #fff;
   margin-top: 44px;
   padding-left: 34px;
   padding-right: 34px;
   font-size: 19px;
   align-self: center;
-  background-color: var(--deep_purple_a200_bc);
+  background: linear-gradient(90deg, var(--deep_purple_a200), #7f5dff);
   box-shadow: var(--shadow-sm);
   text-align: center;
   height: 54px;
   min-width: 298px;
   border-radius: var(--radius-sm);
-  @media only screen and (max-width: 1440px) {
-    font-size: 16px;
-  }
-
-  @media only screen and (max-width: 550px) {
+  font-weight: 600;
+  letter-spacing: .3px;
+  border: none;
+  transition: transform .18s ease, box-shadow .25s ease;
+}
+.get_started:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -4px rgba(90, 54, 200, .4);
+}
+.get_started:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px -2px rgba(90, 54, 200, .35);
+}
+.get_started:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+@media only screen and (max-width: 1440px) {
+  .get_started { font-size: 16px; }
+}
+@media only screen and (max-width: 550px) {
+  .get_started {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -617,6 +691,43 @@ body {
   line-height: 1.5;
   min-height: 120px;
   box-sizing: border-box;
+  position: relative;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  background-clip: padding-box;
+}
+.feedback-output.loading {
+  opacity: .7;
+}
+.feedback-output.is-waiting:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(129, 94, 255, .25);
+  border-top-color: var(--deep_purple_a200);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.feedback-output.fade-in {
+  animation: fadeIn .35s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.feedback-output h2,
+.feedback-output h3 {
+  padding-top: 4px;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+.feedback-output ul li,
+.feedback-output ol li {
+  line-height: 1.4;
 }
 
 /* Markdown output font normalization */
@@ -703,6 +814,8 @@ body {
   .app-title { font-size: 40px; }
   .feedback-output { min-height: 100px; }
   .gridremember_me { grid-template-columns: 1fr 1fr; }
+  .criteria-hint { font-size: 12px; }
+  .feedback-output h2, .feedback-output h3 { border-top: none; }
 }
 
 @media (max-width: 440px) {
@@ -763,5 +876,33 @@ body {
   .column { padding-top: 32px !important; padding-bottom: 40px !important; }
   .whatareyou { margin-top: 28px !important; }
   .get_started { margin-top: 28px !important; }
+}
+
+/* Hint text */
+.criteria-hint {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--blue_gray_500);
+  text-align: center;
+  font-family: Inter, sans-serif;
+}
+
+/* --- Remove inner white dot from custom check/radio buttons --- */
+.radiocheckbox-6::after {
+  display: none !important;
+}
+
+/* Styles for required asterisk and error state */
+.required {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.input-error {
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.25) !important;
+}
+.label-error {
+  color: #d32f2f !important;
 }
 

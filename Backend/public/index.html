@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/components.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <!-- Markdown rendering libs -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -97,15 +98,15 @@
           <div class="columnsubmitwri">
             <p class="submitwriting ui text size-textmd">Submit Writing</p>
             <div class="title">
-              <p class="label ui text size-texts">Assignment Title</p>
+              <p class="label ui text size-texts">Assignment Title<span class="required">*</span></p>
               <input type="text" class="input_one" placeholder="Enter title">
             </div>
             <div class="task">
-              <p class="label ui text size-texts">Assignment Description</p>
+              <p class="label ui text size-texts">Assignment Description<span class="required">*</span></p>
               <input type="text" class="input_three" placeholder="Enter task description">
             </div>
             <div class="mywork">
-              <p class="label ui text size-texts">Your Current Draft</p>
+              <p class="label ui text size-texts">Your Current Draft <span class="required">*</span></p>
             </div>
             <textarea class="input_five"></textarea>
             <h2 class="whatareyou ui heading size-headingxs">What are you looking for feedback on?</h2>
@@ -159,9 +160,10 @@
                 </div>
               </div>
             </div>
-            <button id="submit" class="flex-row-center-center get_started">Get Started!</button>
-              <p class="ui text size-textmd">Your Feedback</p>
-              <div id="response_container" class="feedback-output"></div>
+            <button id="submit" class="flex-row-center-center get_started" aria-label="Request AI feedback and editing suggestions">Refine My Draft</button>
+            <!-- <p class="criteria-hint">Tip: Select only the areas you most want to improve to get sharper feedback.</p> -->
+            <p class="ui text size-textmd">Your Feedback</p>
+            <div id="response_container" class="feedback-output" aria-live="polite"></div>
           </div>
         </div>
       </div>
