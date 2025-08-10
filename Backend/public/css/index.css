@@ -44,7 +44,7 @@
 .input_five {
   border: 1px solid var(--blue_gray_100_01);
   font-family: "Inter";
-  contenteditable: true; /* Make the divs editable */
+  /* contenteditable: true; Make the divs editable */
 }
 
 .radiocheckbox-6::after {

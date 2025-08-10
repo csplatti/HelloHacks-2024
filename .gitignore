@@ -1,2 +1,3 @@
 Backend/GPT Prompting/node_modules/
 Backend/GPT Prompting/hide-api-key.mjs
+.env
