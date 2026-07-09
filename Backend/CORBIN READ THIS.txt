@@ -1,5 +1,0 @@
-tired corbin must remember these things:
-
-1) run app.mjs to run the webapp
-
-i think this is it
